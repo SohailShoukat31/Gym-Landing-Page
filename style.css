@@ -1,0 +1,254 @@
+/* CSS Reset */
+body {
+  background: black;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font-family: "New Amsterdam", sans-serif;
+}
+.left {
+  position: absolute;
+  left: 60px;
+  top: 0px;
+  display: inline-block;
+  color: white;
+  margin-top: 18px;
+}
+.left img {
+  width: 113px;
+}
+.left div {
+  text-align: center;
+  line-height: 19px;
+  font-size: 26px;
+}
+.mid {
+  display: block;
+  width: 36%;
+  margin: 29px auto;
+  color: white;
+}
+.right {
+  position: absolute;
+  right: 34px;
+  top: 38px;
+  display: inline-block;
+  color: white;
+  margin-top: 18px;
+}
+.navbar {
+  display: inline-block;
+}
+.navbar li {
+  display: inline-block;
+  color: white;
+  font-size: 25px;
+}
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  padding: 34px 23px;
+}
+.navbar li a:hover,
+.navbar li a:active {
+  text-decoration: underline;
+  color: gray;
+}
+.btn {
+  margin: 0px 9px;
+  padding: 4px 14px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: "New Amsterdam", sans-serif;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: rgb(27, 32, 32);
+}
+.container {
+  border: 2px solid white;
+  margin: 106px 80px;
+  padding: 75px;
+  width: 33%;
+  border-radius: 18px;
+}
+.container h1 {
+  text-align: center;
+  color: red;
+  font-size: 50px;
+}
+.form-group input {
+  font-family: "New Amsterdam", sans-serif;
+  display: block;
+  width: 508px;
+  padding: 1px;
+  margin: 11px auto;
+  font-size: 25px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.container .btn {
+  width: 508px;
+  display: block;
+  margin: 20px auto;
+  background-color: red;
+}
+.container .btn:hover {
+  background-color: white;
+  color: black;
+}
+h1 {
+  text-align: center;
+  color: red;
+  font-size: 50px;
+}
+.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.center .box {
+  text-align: center;
+  font-family: "New Amsterdam", sans-serif;
+  width: 300px;
+  height: 400px;
+  margin: 3px auto;
+  padding: 5px;
+  background-color: black;
+  color: rgb(39, 21, 21);
+  border: 3px solid rgb(140, 135, 64);
+  border-radius: 10px;
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+@keyframes spin {
+  to {
+    transform: rotateY(1turn);
+  }
+}
+
+@layer demo.support {
+  .box {
+    display: grid;
+    place-content: center;
+  }
+}
+
+.center h3 {
+  font-family: "New Amsterdam", sans-serif;
+  color: crimson;
+  letter-spacing: 2px;
+  font-size: 35px;
+}
+.center p {
+  color: white;
+}
+
+.center a {
+  text-decoration: none;
+  font-size: 23px;
+}
+
+.center a:hover {
+  text-decoration: underline;
+}
+.center .box:hover {
+  background-color: rgb(109, 141, 201);
+  border: none;
+  color: black;
+  width: 400px;
+  font-size: 23px;
+  color: black;
+  font-family: "New Amsterdam", sans-serif;
+}
+.center .box p:hover {
+  color: black;
+}
+.center .box a:hover {
+  color: black;
+  background-color: green;
+  padding: 0px 13px;
+  border-radius: 10px;
+}
+
+/* footer */
+.footer {
+  background-color: rgb(48, 48, 48);
+  color: white;
+  box-shadow: 10px 20px 2px 5px rgb(255, 255, 255);
+}
+.footer .footer-item {
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer .footer-item ul li {
+  list-style: none;
+  margin-top: 10px;
+}
+.copy-writes {
+  height: auto;
+  background-color: whitesmoke;
+  color: rgb(25, 0, 255);
+  text-align: center;
+  font-weight: 300;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .left,
+  .right {
+    position: static;
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar li {
+    margin: 10px 0;
+  }
+
+  .mid {
+    width: 90%;
+  }
+
+  .container {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .form-group input {
+    width: 80%;
+  }
+
+  .container .btn {
+    width: 90%;
+  }
+
+  .center {
+    flex-direction: column;
+  }
+
+  .center .box {
+    width: 90%;
+    margin: 20px 0;
+  }
+
+  .footer .footer-item {
+    flex-direction: column;
+    align-items: center;
+  }
+}
